@@ -14,7 +14,7 @@ class HomeViewHolder(itemView: View) : BaseViewHolder<String>(itemView) {
     override fun bind(item: String, position: Int) {
         super.bind(item, position)
         tvKeyword.text = item.trim()
-        lgBackground.setCardBackgroundColor(itemView.resources.getIntArray(R.array.backgroundColor)[position])
+        lgBackground.setCardBackgroundColor(itemView.resources.getIntArray(R.array.backgroundColor)[position%4])
     }
 }
 
